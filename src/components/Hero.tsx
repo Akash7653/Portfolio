@@ -42,12 +42,12 @@ export default function Hero() {
           >
             {/* Profile Image with Animated Background */}
             <motion.div
-              className="mb-8 flex justify-center"
+              className="mb-8 flex justify-center mt-12"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
             >
-              <div className="relative">
+              <div className="relative w-56 h-56 md:w-72 md:h-72">
                 {/* Animated gradient background circles */}
                 <motion.div
                   className="absolute inset-0 -inset-4 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full blur-2xl opacity-60"
@@ -73,9 +73,9 @@ export default function Hero() {
                 />
                 
                 {/* Profile Image */}
-                <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm shadow-2xl">
+                <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
                   <img 
-                    src="/pubilc/Profile.jpeg" 
+                    src="pubilc/Profile.jpeg" 
                     alt="Akash Babu Koravena" 
                     className="w-full h-full object-cover"
                   />
