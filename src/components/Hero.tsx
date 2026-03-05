@@ -75,7 +75,7 @@ export default function Hero() {
                 {/* Profile Image */}
                 <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-2xl z-10">
                   <img 
-                    src="pubilc/Profile.jpeg" 
+                    src="/pubilc/Profile.jpeg" 
                     alt="Akash Babu Koravena" 
                     className="w-full h-full object-cover"
                   />
