@@ -40,11 +40,54 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Profile Image with Animated Background */}
+            <motion.div
+              className="mb-8 flex justify-center"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
+            >
+              <div className="relative">
+                {/* Animated gradient background circles */}
+                <motion.div
+                  className="absolute inset-0 -inset-4 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 rounded-full blur-2xl opacity-60"
+                  animate={{ 
+                    rotate: 360,
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{ 
+                    rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                />
+                <motion.div
+                  className="absolute inset-0 -inset-2 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 rounded-full blur-xl opacity-40"
+                  animate={{ 
+                    rotate: -360,
+                    scale: [1.1, 1, 1.1]
+                  }}
+                  transition={{ 
+                    rotate: { duration: 10, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                />
+                
+                {/* Profile Image */}
+                <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm shadow-2xl">
+                  <img 
+                    src="/pubilc/Profile.jpeg" 
+                    alt="Akash Babu Koravena" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
             <motion.div
               className="mb-4 inline-block"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+              transition={{ type: "spring", stiffness: 200, delay: 0.4 }}
             >
               <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium backdrop-blur-sm">
                 Available for opportunities
